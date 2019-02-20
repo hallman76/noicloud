@@ -1,0 +1,12 @@
+{
+  "name": "noicloud",
+  "version": "0.1.0",
+  "description": "Prevents your node_modules folder from being uploaded to iCloud.",
+  "scripts": {
+    "postinstall": "mv $INIT_CWD/node_modules $INIT_CWD/node_modules.nosync && ln -s $INIT_CWD/node_modules.nosync/ $INIT_CWD/node_modules",
+    "preuninstall": "rm $INIT_CWD/node_modules && mv  $INIT_CWD/node_modules.nosync $INIT_CWD/node_modules"
+  },
+  "keywords": [],
+  "author": "https://github.com/hallman76",
+  "license": "MIT"
+}
